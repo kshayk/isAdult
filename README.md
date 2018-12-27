@@ -27,6 +27,8 @@ Since this scripts also injects the ml5 script in the HTML, by adding this scrip
 correct hierarchy of the scripts.
 
 Example can be shown in the ```example.html``` file attached to this repository.
+<BR>
+A live example is also available [here](https://peaceful-badlands-65319.herokuapp.com/)
 
 -----
 

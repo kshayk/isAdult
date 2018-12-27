@@ -1,6 +1,6 @@
 {
   "name": "isadult",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Machine learning algorithm written in JS to check if an image contains adult content",
   "main": "isAdult.js",
   "scripts": {
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/kshayk/isAdult/issues"
   },
-  "homepage": "https://github.com/kshayk/isAdult#readme"
+  "homepage": "https://peaceful-badlands-65319.herokuapp.com/"
 }
