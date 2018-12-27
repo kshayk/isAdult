@@ -1,0 +1,26 @@
+{
+  "name": "isadult",
+  "version": "1.0.0",
+  "description": "Machine learning algorithm written in JS to check if an image contains adult content",
+  "main": "isAdult.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshayk/isAdult.git"
+  },
+  "keywords": [
+    "isAdult",
+    "adult",
+    "ml5",
+    "machine learning",
+    "image processing"
+  ],
+  "author": "Shay Kintzlinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshayk/isAdult/issues"
+  },
+  "homepage": "https://github.com/kshayk/isAdult#readme"
+}
