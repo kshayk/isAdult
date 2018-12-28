@@ -50,7 +50,7 @@
         }
     }
 
-    // Classification processing code
+    // Classification Processing Code
 
     const NO_RISK_STATUS = 1;
     const MEDIUM_RISK_STATUS = 2;
@@ -91,7 +91,7 @@
         return statusAndMessage(NO_RISK_STATUS);
     };
 
-    // Allow users to check what the status is without know the underlying values    
+    // Allow users to check what the status is without knowing the underlying values    
 
     Object.assign(window.checkAdultImage, { NO_RISK_STATUS, MEDIUM_RISK_STATUS, HIGH_RISK_STATUS });
 })();
