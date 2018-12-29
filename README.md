@@ -18,6 +18,10 @@ The ```status``` may contain 3 different statuses with a type of integer:
 
 The ```msg``` property is the verbal explanation of the status.
 
+In case of an error an object with the following format will be returned:
+* ```err``` - Will always have a boolean value of ```true``` (not present in a successful call)
+* ```msg``` - Will have a string value of the error message
+
 A few notes before you start:
 * It is recommended that the ```<image>``` tag will contain a ```crossorigin="anonymous"``` attribute, especially
 if you are dealing with external image sources. Unfortunately, ml5 can not process images from sources that are blocking
