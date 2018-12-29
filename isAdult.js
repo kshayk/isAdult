@@ -32,12 +32,11 @@
     });
 
     const classifyImage = async imgElement => {
-        let msgPrefix = 'Image classifier:';
         const scriptId = await loadScript;
         const scriptElement = document.getElementById(scriptId);
 
         if (!scriptElement) {
-            throw new Error(`${msgPrefix} Could not load dynamic script into the HTML`);
+            throwImageClassifierError(`Could not load dynamic script into the HTML`);
         }
 
         let classifier;
@@ -47,13 +46,13 @@
 
             classifier = await ml5.imageClassifier('MobileNet');
         } catch (e) {
-            throw new Error(`${msgPrefix} Failed to load the ml5 classifier module`);
+            throwImageClassifierError(`Failed to load the ml5 classifier module`);
         }
 
         try {
             return classifier.predict(imgElement);
         } catch (e) {
-            throw new Error(`${msgPrefix} This image could not be parsed.`);
+            throwImageClassifierError(`This image could not be parsed.`);
         }
     };
 
@@ -78,18 +77,12 @@
     ];
 
     const statusAndMessage = status => ({ status, msg: STATUS_MESSAGES[status] });
-    const errorMessage = msg => ({err: true, msg});
+    const throwImageClassifierError = err => { throw new Error(`Image classifier: ${err}`) };
     const categoriesIncludeKeywords = (categories, keywords) =>
         categories.filter(c => keywords.includes(c)).length > 0;
 
     window.checkAdultImage = async imgElement => {
-        let results;
-
-        try {
-            results = await classifyImage(imgElement);
-        } catch (e) {
-            return errorMessage(e.message);
-        }
+        const results = await classifyImage(imgElement);
 
         const allCategories = results
             .map(r => r.className.split(', '))

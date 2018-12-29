@@ -1,6 +1,6 @@
 {
   "name": "isadult",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Machine learning algorithm written in JS to check if an image contains adult content",
   "main": "isAdult.js",
   "scripts": {
